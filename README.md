@@ -2,6 +2,7 @@
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+![image](https://github.com/user-attachments/assets/4192e61d-a96c-4490-8d39-04ffac7ad412)
 
 Premissa do jogo ; Certo dia, duas corujas irmãs fogem de seu ninho para explorar a floresta encantada de Mega city, depois de sobrevoarem a cidade por muito tempo, eles finalmente chegam à floresta. Lá a irmã mais nova Anne percebe que está sozinha e que não consegue enxergar mais seu irmão por perto. Depois de muito chiar para encontrá-lo, Anne percebe que seu irmão Brian havia deixado algo para trás para marcar seu caminho para voltar. Brian deixou seu rastro com vários corações comestíveis pelos lugares, para que eles o guiassem até seu ninho novamente. Durante a procura de Anne, seu irmão já está voltando para encontrá-la e destruindo o caminho que tinha feito, comendo os corações. Durante esses desencontros, os irmãos vão coletando todos os corações até finalmente se encontrarem e voltarem para casa juntos e em segurança. 
 
