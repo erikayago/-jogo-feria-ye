@@ -21,7 +21,7 @@ ________________________________________________________________________________
 
 Anne: Ela possui uma pelagem macia e penas densas de cor branca. Seus olhos são pequenos e amarelos, que permitem com que ela possa enxergar melhor para explorar e sobrevoar ambientes. Anne é a irmã mais nova e por ter seu irmão para protegê-la sempre, possui um jeito medroso e tímida. Seu chamado é suave e geralmente usado para comunicar medo ou alerta para seu irmão Brian e outros da sua espécie. 
 
-Brian: Ele é maior e mais robusto que Anne, com uma plumagem marrom escura e manchas pretas distintas ao longo de suas asas. Brian é mais intrépido e curioso que sua irmã, sempre querendo explorar novos territórios e se aventura por aí. Ao contrário de Anne, Brian é um tanto quanto impulsivo, sua coragem e determinação o tornam um excelente protetor para sua família.
+Brian: Ele é maior e mais robusto que Anne, com uma plumagem marrom escura e manchas pretas distintas ao longo de suas asas. Brian é mais intrépido e curioso que sua irmã, sempre querendo explorar novos territórios e se aventura por aí. Ao contrário de Anne, ele é um tanto quanto impulsivo, sua coragem e determinação o tornam um excelente protetor para sua família.
 
 **OBJETIVO**
 _____________________________________________________________________________________________________________________
