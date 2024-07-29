@@ -1,9 +1,9 @@
 export default class mapa extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('mapa')
   }
 
-  preload () {
+  preload() {
     // Carrega os sons
     this.load.audio('mapa', './assets/mapa.mp3')
     this.load.audio('coruja', './assets/coruja.mp3')
@@ -34,7 +34,7 @@ export default class mapa extends Phaser.Scene {
     this.load.spritesheet('direita', './assets/direita.png', { frameWidth: 64, frameHeight: 64 })
   }
 
-  create () {
+  create() {
     // Adiciona um ponteiro de toque (padrão: 2)
     this.input.addPointer(3)
 
@@ -149,19 +149,12 @@ export default class mapa extends Phaser.Scene {
 
       // Cria variável de controle sobre nuvens modificadas
       this.nuvensModificadas = true
-    } else {
-      // Gera mensagem de log para informar que o usuário está fora da partida
-      console.log('Usuário não é o primeiro ou o segundo jogador. Não é possível iniciar a partida. ')
-
-      // Encerra a cena atual e inicia a cena de sala
-      globalThis.game.scene.stop('mapa')
-      globalThis.game.scene.start('sala')
     }
 
     // Define o atributo do tileset para gerar colisão
     this.layerParedes.setCollisionByProperty({ collides: true })
     // Adiciona colisão entre o personagem e as paredes
-    this.physics.add.collider(this.personagemLocal, this.layerParedes)
+    this.physics.add.collider(this.personagemLocal, this.layerParedes, this.finalTriste, null, this)
 
     this.anims.create({
       key: 'personagem-parado-esquerda',
@@ -394,7 +387,7 @@ export default class mapa extends Phaser.Scene {
     }).setScrollFactor(0)
   }
 
-  update () {
+  update() {
     // Alguns frames podem estar (ainda) sem personagem ou nuvem,
     // por isso é necessário verificar se existem antes de enviar
     try {
@@ -430,7 +423,12 @@ export default class mapa extends Phaser.Scene {
           }
 
           // Atualiza o placar de nuvens coletadas pelos dois jogadores
-          this.pontos.setText('Nuvens: ' + this.nuvens.filter(nuvem => !nuvem.active).length)
+          const nuvensColetadas = this.nuvens.filter(nuvem => !nuvem.active).length
+          this.pontos.setText('Nuvens: ' + nuvensColetadas)
+          if (nuvensColetadas > 10) {
+            this.scene.stop('mapa')
+            this.scene.start('finalFeliz')
+          }
         }
       }
     } catch (error) {
@@ -439,7 +437,7 @@ export default class mapa extends Phaser.Scene {
     }
   }
 
-  coletarNuvem (personagem, nuvem) {
+  coletarNuvem(personagem, nuvem) {
     // Desativa o overlap entre personagem e nuvem
     nuvem.overlap.destroy()
 
@@ -454,5 +452,11 @@ export default class mapa extends Phaser.Scene {
       // Muda variável de controle de nuvem
       this.nuvensModificadas = true
     })
+  }
+
+  finalTriste() {
+    // Encerra a cena atual e inicia a cena de final triste
+    this.scene.stop('mapa')
+    this.scene.start('finalTriste')
   }
 }
