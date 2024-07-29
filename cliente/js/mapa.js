@@ -454,7 +454,7 @@ export default class mapa extends Phaser.Scene {
     })
   }
 
-  finalTriste() {
+  finalTriste () {
     // Encerra a cena atual e inicia a cena de final triste
     this.scene.stop('mapa')
     this.scene.start('finalTriste')
